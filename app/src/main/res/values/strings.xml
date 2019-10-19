@@ -9,5 +9,11 @@
     <string name="loginButton">Login</string>
     <string name="registerButton">No account yet? Create one</string>
 
+    <!--register panel strings-->
+    <string name="email">Email</string>
+    <string name="emailHint">Enter your email ...</string>
+    <string name="age">Age</string>
+    <string name="ageHint">Enter your age ...</string>
+    <string name="createAccountButton">Create account</string>
 
 </resources>
