@@ -21,7 +21,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="4">
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/recently_searched"
+            android:textColor="@color/textOnAccent"
+            android:textSize="15sp">
+
+        </TextView>
 
         <HorizontalScrollView
             android:id="@+id/first"
@@ -30,7 +40,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +56,15 @@
             </LinearLayout>
         </HorizontalScrollView>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/recently_popular"
+            android:textColor="@color/textOnAccent"
+            android:textSize="15sp">
+
+        </TextView>
 
         <HorizontalScrollView
             android:id="@+id/second"
@@ -54,7 +73,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,8 +87,20 @@
                 android:orientation="horizontal">
 
             </LinearLayout>
+
+
         </HorizontalScrollView>
 
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/latest"
+            android:textColor="@color/textOnAccent"
+            android:textSize="15sp">
+
+        </TextView>
 
         <HorizontalScrollView
             android:id="@+id/third"
@@ -79,7 +110,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,5 +125,7 @@
 
             </LinearLayout>
         </HorizontalScrollView>
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
