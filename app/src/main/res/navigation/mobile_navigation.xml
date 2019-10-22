@@ -3,41 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_main_page">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_main_page"
         android:name="com.example.booksagregator.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_main_page"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.booksagregator.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_user_panel"
+        android:name="com.example.booksagregator.ui.userpanel.UserPanelFragment"
+        android:label="@string/menu_user_panel"
+        tools:layout="@layout/fragment_user_panel" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.booksagregator.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_about"
+        android:name="com.example.booksagregator.ui.about.AboutAppFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about_app" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.example.booksagregator.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
+        android:id="@+id/nav_sign_out"
+        android:name="com.example.booksagregator.ui.logout.LogOutFragment"
+        android:label="@string/menu_sign_out"
         tools:layout="@layout/fragment_tools" />
 
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="com.example.booksagregator.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.example.booksagregator.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
 </navigation>

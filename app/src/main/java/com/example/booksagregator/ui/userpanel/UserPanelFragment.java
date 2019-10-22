@@ -1,4 +1,4 @@
-package com.example.booksagregator.ui.home;
+package com.example.booksagregator.ui.userpanel;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,40 +6,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.booksagregator.R;
 
-public class HomeFragment extends Fragment {
+public class UserPanelFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private UserPanelViewModel userPanelViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-//        final TextView textView = root.findViewById(R.id.text_home);
-//        homeViewModel.getText().observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
-
+        userPanelViewModel =
+                ViewModelProviders.of(this).get(UserPanelViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_user_panel, container, false);
 
         LinearLayout gallery = root.findViewById(R.id.gallery);
         LinearLayout gallery2 = root.findViewById(R.id.gallery2);
         LinearLayout gallery3 = root.findViewById(R.id.gallery3);
 
 
-        inflater = LayoutInflater.from(getActivity());
+         inflater = LayoutInflater.from(getActivity());
 
         for (int i = 0; i < 6; i++) {
 
@@ -58,6 +47,13 @@ public class HomeFragment extends Fragment {
             gallery2.addView(view2);
             gallery3.addView(view3);
         }
+//        final TextView textView = root.findViewById(R.id.text_gallery);
+//        userPanelViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
         return root;
     }
 }
