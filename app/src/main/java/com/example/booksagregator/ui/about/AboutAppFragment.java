@@ -20,13 +20,7 @@ public class AboutAppFragment extends Fragment {
         aboutAppViewModel =
                 ViewModelProviders.of(this).get(AboutAppViewModel.class);
         View root = inflater.inflate(R.layout.fragment_about_app, container, false);
-//        final TextView textView = root.findViewById(R.id.text_slideshow);
-//        aboutAppViewModel.getText().observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
+
         return root;
     }
 }

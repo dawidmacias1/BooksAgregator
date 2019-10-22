@@ -3,34 +3,39 @@ package com.example.booksagregator.validator;
 
 public class UserRegisterValidation {
 
-    public static boolean validiate (String pass, String username, String email){
+    public boolean validiate(String pass, String username, String email) {
         String pattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[!@#$%^&*+=?-]).{8,15}$";
-        if(pass.matches(pattern)){
-            for(int i=0;(i+3)<username.length();i++){
-                if(pass.contains(username.substring(i,i+3)) || username.length()<3 || username.length()>15){
+        if (pass.matches(pattern)) {
+            for (int i = 0; (i + 3) < username.length(); i++) {
+                if (pass.contains(username.substring(i, i + 3)) || username.length() < 3 || username.length() > 15) {
                     return false;
                 }
             }
-            for(int i=0;(i+3)<email.length();i++){
-                if(pass.contains(email.substring(i,i+3)) || email.length()<3 || email.length()>15){
+            for (int i = 0; (i + 3) < email.length(); i++) {
+                if (pass.contains(email.substring(i, i + 3)) || email.length() < 3 || email.length() > 25) {
                     return false;
                 }
             }
+            if (username.length() < 3 || !email.contains("@")) {
+                return false;
+            }
+
             return true;
         }
         return false;
     }
+
     // if you want to know which requirement was not met
-    public static boolean validiate2 (String pass, String username, String email){
-        if (pass.length() < 8 || pass.length() >15 ){
+    public boolean validiate2(String pass, String username, String email) {
+        if (pass.length() < 8 || pass.length() > 15) {
             System.out.println("pass too short or too long");
             return false;
         }
-        if (username.length() < 3 || username.length() >15 ){
+        if (username.length() < 3 || username.length() > 15) {
             System.out.println("username too short or too long");
             return false;
         }
-        if (!pass.matches(".*\\d.*")){
+        if (!pass.matches(".*\\d.*")) {
             System.out.println("no digits found");
             return false;
         }
@@ -43,21 +48,21 @@ public class UserRegisterValidation {
             System.out.println("no special chars found");
             return false;
         }
-        if (containsPartOf(pass,username)) {
+        if (containsPartOf(pass, username)) {
             System.out.println("pass contains substring of username");
             return false;
         }
-        if (containsPartOf(pass,email)) {
+        if (containsPartOf(pass, email)) {
             System.out.println("pass contains substring of email");
             return false;
         }
         return true;
     }
 
-    private static boolean containsPartOf(String pass, String username) {
+    private boolean containsPartOf(String pass, String username) {
         int requiredMin = 3;
-        for(int i=0;(i+requiredMin)<username.length();i++){
-            if(pass.contains(username.substring(i,i+requiredMin))){
+        for (int i = 0; (i + requiredMin) < username.length(); i++) {
+            if (pass.contains(username.substring(i, i + requiredMin))) {
                 return true;
             }
         }

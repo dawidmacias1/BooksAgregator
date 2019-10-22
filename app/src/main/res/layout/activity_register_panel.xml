@@ -110,7 +110,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:hint="@string/ageHint"
-        android:inputType="textPassword" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/button_create_account_confirm"

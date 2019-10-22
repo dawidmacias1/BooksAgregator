@@ -1,5 +1,7 @@
 package com.example.booksagregator.ui.home;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,13 +17,14 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.booksagregator.R;
+import com.example.booksagregator.ResourceActivity;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             final ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -41,6 +44,7 @@ public class HomeFragment extends Fragment {
 
         inflater = LayoutInflater.from(getActivity());
 
+
         for (int i = 0; i < 6; i++) {
 
             View view = inflater.inflate(R.layout.item, gallery, false);
@@ -58,6 +62,33 @@ public class HomeFragment extends Fragment {
             gallery2.addView(view2);
             gallery3.addView(view3);
         }
+
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
+                startActivity(act2);
+            }
+        });
+
+        gallery2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
+                startActivity(act2);
+            }
+        });
+
+        gallery3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
+                startActivity(act2);
+            }
+        });
+
         return root;
     }
+
+
 }

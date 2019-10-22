@@ -1,5 +1,6 @@
 package com.example.booksagregator.ui.userpanel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,13 +13,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.booksagregator.R;
+import com.example.booksagregator.ResourceActivity;
 
 public class UserPanelFragment extends Fragment {
 
     private UserPanelViewModel userPanelViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             final ViewGroup container, Bundle savedInstanceState) {
         userPanelViewModel =
                 ViewModelProviders.of(this).get(UserPanelViewModel.class);
         View root = inflater.inflate(R.layout.fragment_user_panel, container, false);
@@ -28,7 +30,7 @@ public class UserPanelFragment extends Fragment {
         LinearLayout gallery3 = root.findViewById(R.id.gallery3);
 
 
-         inflater = LayoutInflater.from(getActivity());
+        inflater = LayoutInflater.from(getActivity());
 
         for (int i = 0; i < 6; i++) {
 
@@ -47,13 +49,31 @@ public class UserPanelFragment extends Fragment {
             gallery2.addView(view2);
             gallery3.addView(view3);
         }
-//        final TextView textView = root.findViewById(R.id.text_gallery);
-//        userPanelViewModel.getText().observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
+
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
+                startActivity(act2);
+            }
+        });
+
+        gallery2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
+                startActivity(act2);
+            }
+        });
+
+        gallery3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
+                startActivity(act2);
+            }
+        });
+
         return root;
     }
 }
