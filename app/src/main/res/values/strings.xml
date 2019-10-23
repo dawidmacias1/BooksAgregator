@@ -38,8 +38,8 @@
     <string name="favorites_songs">Favorites songs</string>
 
     <string name="description">Description</string>
-    <string name="title">Title</string>
-    <string name="author">Author</string>
+    <string name="title">Title: </string>
+    <string name="author">Author: </string>
 
     <string name="example_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat quam at iaculis condimentum. Sed nunc leo, condimentum quis nisl ut, sodales maximus massa. Nam elementum vitae felis a semper. Sed rhoncus nunc nec congue ornare. Duis a lectus laoreet, rutrum lorem in, mattis felis. In in mauris nec dui mattis elementum et sit amet felis. In tempor maximus tellus sed tristique. In id tempus neque, eleifend pharetra turpis. Nulla sed convallis neque. Duis egestas sed tortor quis porttitor. Suspendisse potenti. Duis mauris nulla, fermentum nec egestas in, maximus ac sapien.</string>
 

@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class UserRegisterValidationTest {
 
     @Test
-    public void isCorrectPLength(){
+    public void isCorrectPLength() {
 
         String password = "rrr1!2rrrArr";
         String username = "lujoo66";
@@ -20,4 +20,17 @@ public class UserRegisterValidationTest {
 
         assertTrue(userRegisterValidation.validiate(password, username, email));
     }
+
+    @Test
+    public void isEmailContainSpecialDigit() {
+
+        String password = "rrr1!2rrrArr";
+        String username = "lujoo66";
+        String email = "janussz@gmail.com";
+
+        UserRegisterValidation userRegisterValidation = new UserRegisterValidation();
+
+        assertTrue(userRegisterValidation.validiate(password, username, email));
+    }
+
 }

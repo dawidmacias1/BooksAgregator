@@ -23,8 +23,10 @@
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".ResourceActivity" />
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".ResourceActivity"
+            android:label="@string/title_activity_user_main_panel"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
