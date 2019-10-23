@@ -24,6 +24,12 @@
         tools:layout="@layout/fragment_about_app" />
 
     <fragment
+        android:id="@+id/nav_favourites"
+        android:name="com.example.booksagregator.ui.favourites.FavouritesFragment"
+        android:label="@string/app_name"
+        />
+
+    <fragment
         android:id="@+id/nav_sign_out"
         android:name="com.example.booksagregator.ui.logout.LogOutFragment"
         android:label="@string/app_name"

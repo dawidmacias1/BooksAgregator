@@ -103,7 +103,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
-            android:text="@string/favorites"
+            android:text="@string/favourites"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="22sp"
             android:textStyle="bold">
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
-                    android:text="@string/favorites_books"
+                    android:text="@string/favourites_books"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="20sp">
 
@@ -158,7 +158,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:text="@string/favorites_movies"
+                    android:text="@string/favourites_movies"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="20sp">
 
@@ -194,7 +194,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:text="@string/favorites_songs"
+                    android:text="@string/favourites_songs"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="20sp">
 

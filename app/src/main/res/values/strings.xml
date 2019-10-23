@@ -10,9 +10,9 @@
     <string name="registerButton">No account yet? Create one</string>
 
     <!--register panel strings-->
-    <string name="email">Email</string>
+    <string name="email">Email: </string>
     <string name="emailHint">Enter your email ...</string>
-    <string name="age">Age</string>
+    <string name="age">Date of birth: </string>
     <string name="ageHint">Enter your age ...</string>
     <string name="createAccountButton">Create account</string>
     <string name="title_activity_user_main_panel">UserMainPanel</string>
@@ -32,10 +32,10 @@
     <string name="recently_popular">Recently Popular</string>
     <string name="latest">Latest</string>
     
-    <string name="favorites">Favorites</string>
-    <string name="favorites_books">Favorites Books</string>
-    <string name="favorites_movies">Favorites movies</string>
-    <string name="favorites_songs">Favorites songs</string>
+    <string name="favourites">Favourites</string>
+    <string name="favourites_books">Books</string>
+    <string name="favourites_movies">Movies</string>
+    <string name="favourites_songs">Songs</string>
 
     <string name="description">Description</string>
     <string name="title">Title: </string>
