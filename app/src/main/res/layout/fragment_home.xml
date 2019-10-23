@@ -12,11 +12,48 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/options_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/movies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/favourites_movies"
+                android:theme="@style/AppTheme.Button" />
+
+            <Button
+                android:id="@+id/music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/favourites_songs"
+                android:theme="@style/AppTheme.Button" />
+
+            <Button
+                android:id="@+id/books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/favourites_books"
+                android:theme="@style/AppTheme.Button" />
+
+        </LinearLayout>
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/recently_searched"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="25sp">

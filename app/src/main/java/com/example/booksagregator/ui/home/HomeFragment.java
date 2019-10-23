@@ -1,17 +1,26 @@
 package com.example.booksagregator.ui.home;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -22,6 +31,11 @@ import com.example.booksagregator.ResourceActivity;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
+    private Button movies, music, books;
+
+    private SearchView searchView = null;
+    private SearchView.OnQueryTextListener queryTextListener;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
@@ -35,7 +49,29 @@ public class HomeFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
+        setHasOptionsMenu(true);
 
+        movies = root.findViewById(R.id.movies);
+        music = root.findViewById(R.id.music);
+        books = root.findViewById(R.id.books);
+
+        movies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
+        music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+
+        books.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
 
         LinearLayout gallery = root.findViewById(R.id.gallery);
         LinearLayout gallery2 = root.findViewById(R.id.gallery2);
@@ -90,5 +126,38 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.user_main_panel, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+
+        if (searchItem != null) {
+            searchView = (SearchView) searchItem.getActionView();
+        }
+        if (searchView != null) {
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+
+            queryTextListener = new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextChange(String newText) {
+
+                    return true;
+                }
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+
+                    return true;
+                }
+            };
+            searchView.setOnQueryTextListener(queryTextListener);
+        }
+        super.onCreateOptionsMenu(menu, inflater);
+    }
 }

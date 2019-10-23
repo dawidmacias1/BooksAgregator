@@ -2,6 +2,8 @@ package com.example.booksagregator.ui.about;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -22,5 +24,14 @@ public class AboutAppFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_about_app, container, false);
 
         return root;
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+
+        // This does work
+        MenuItem someMenuItem = menu.findItem(R.id.action_search);
+        someMenuItem.setVisible(false);
     }
 }
