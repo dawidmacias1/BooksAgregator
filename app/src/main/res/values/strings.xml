@@ -26,6 +26,7 @@
     <string name="menu_main_page">Main page</string>
     <string name="menu_user_panel">User panel</string>
     <string name="menu_about">About</string>
+    <string name="menu_composition">Add Composition</string>
     <string name="menu_sign_out">Log out</string>
     
     <string name="recently_searched">Recently searched </string>
@@ -45,5 +46,14 @@
 
     <string name="about_title">About</string>
     <string name="about_application">Aplikacja została stworzona w ramach zajęć związanych z blokiem obieralnym "Technologie mobile" Autorami aplikacji są: Krzysztof Kaczyński, Dawid Macias, Jakub Wojtaszewski oraz Karol Oleksy.</string>
+
+    <string name="composition_resources">Composition resources</string>
+    
+    <string name="collection_name">Name: </string>
+    <string name="enter_collection_name">Enter collection name...</string>
+    <string name="collection_description">Description: </string>
+    <string name="enter_collection_description">Enter description...</string>
+    <string name="collection_add_resource">Add resource: </string>
+    <string name="button_create_composition">Create</string>
 
 </resources>

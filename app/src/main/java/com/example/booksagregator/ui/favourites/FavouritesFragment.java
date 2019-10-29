@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.booksagregator.CompositionPanelActivity;
 import com.example.booksagregator.R;
 import com.example.booksagregator.ResourceActivity;
 
@@ -64,7 +65,7 @@ public class FavouritesFragment extends Fragment {
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
+                Intent act2 = new Intent(container.getContext(), CompositionPanelActivity.class);
                 startActivity(act2);
             }
         });

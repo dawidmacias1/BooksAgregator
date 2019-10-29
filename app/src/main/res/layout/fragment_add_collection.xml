@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/collection_name"
+            android:textColor="@color/textOnAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/collection_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:hint="@string/enter_collection_name"
+            android:textColor="@color/textOnAccent"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/collection_description"
+            android:textColor="@color/textOnAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/collection_description"
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:layout_marginHorizontal="40dp"
+            android:background="@color/input_background"
+            android:gravity="center_horizontal"
+            android:hint="@string/enter_collection_description"
+            android:textColor="@color/textOnAccent"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/collection_add_resource"
+            android:textColor="@color/textOnAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SearchView
+            android:id="@+id/collection_search_resources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp" />
+
+        <LinearLayout
+            android:layout_marginVertical="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="@string/composition_resources"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="2"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_create_composition"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_input"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="67dp"
+            android:layout_marginRight="67dp"
+            android:text="@string/button_create_composition"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:theme="@style/AppTheme.Button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

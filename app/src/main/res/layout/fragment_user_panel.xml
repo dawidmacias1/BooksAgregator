@@ -12,220 +12,103 @@
         android:weightSum="10">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="40dp"
-                    android:text="@string/username"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp">
-
-                </TextView>
-
-                <TextView
-                    android:id="@+id/username_id"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/username"
-                    android:layout_alignLeft="@+id/username"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Retersan"
-                    android:textColor="@color/textOnAccent"
-                    android:textSize="15sp">
-
-                </TextView>
-
-                <TextView
-                    android:id="@+id/email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/username_id"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/email"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp">
-
-                </TextView>
-
-
-                <TextView
-                    android:id="@+id/username_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/email"
-                    android:layout_alignLeft="@+id/email"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:text="broxar@gmail.com"
-                    android:textColor="@color/textOnAccent"
-                    android:textSize="15sp">
-
-                </TextView>
-
-            </RelativeLayout>
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="40dp"
-                android:src="@drawable/ic_person_black_24dp"
-                android:text="Retersan">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_person_black_24dp" />
 
-            </ImageView>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="3dp"
-            android:layout_margin="20dp"
-            android:background="@color/colorAccent">
-
-        </View>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="@string/favourites"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="22sp"
-            android:textStyle="bold">
-
-        </TextView>
-
-
-        <ScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <LinearLayout
+            <TextView
+                android:id="@+id/username_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginHorizontal="30dp"
+                android:gravity="center_horizontal"
+                android:text="Retersan"
+                android:textColor="@color/textOnAccent"
+                android:textSize="30sp" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/favourites_books"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp">
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_margin="20dp"
+                android:background="@color/colorAccent">
 
-                </TextView>
+            </View>
 
-                <HorizontalScrollView
-                    android:id="@+id/first"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="2"
-                    android:scrollbars="none"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/email"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp">
 
-                    <LinearLayout
-                        android:id="@+id/gallery"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                    </LinearLayout>
-                </HorizontalScrollView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="@string/favourites_movies"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp">
-
-                </TextView>
-
-                <HorizontalScrollView
-                    android:id="@+id/second"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="2"
-                    android:scrollbars="none"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <LinearLayout
-                        android:id="@+id/gallery2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                    </LinearLayout>
+            </TextView>
 
 
-                </HorizontalScrollView>
+            <TextView
+                android:id="@+id/username_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="70dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="broxar@gmail.com"
+                android:textColor="@color/textOnAccent"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/age"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="25sp">
+
+            </TextView>
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="@string/favourites_songs"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp">
+            <TextView
+                android:id="@+id/username_date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="70dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="10 - 11 - 1984"
+                android:textColor="@color/textOnAccent"
+                android:textSize="20sp">
 
-                </TextView>
+            </TextView>
 
-                <HorizontalScrollView
-                    android:id="@+id/third"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="2"
-                    android:scrollbars="none"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent" />
 
-                    <LinearLayout
-                        android:id="@+id/gallery3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                    </LinearLayout>
-                </HorizontalScrollView>
-
-            </LinearLayout>
-        </ScrollView>
+        </LinearLayout>
 
 
     </LinearLayout>

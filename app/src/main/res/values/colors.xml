@@ -9,4 +9,6 @@
 
     <color name="textOnAccent">#000000</color>
     <color name="textOnPrimary">#FFFFFF</color>
+
+    <color name="input_background">#4D666AD1</color>
 </resources>

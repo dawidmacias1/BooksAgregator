@@ -27,6 +27,9 @@
         <activity android:name=".ResourceActivity"
             android:label="@string/title_activity_user_main_panel"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".CompositionPanelActivity"
+            android:label="@string/title_activity_user_main_panel"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
