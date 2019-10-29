@@ -22,6 +22,7 @@ public class CompositionFragment extends Fragment {
 
     private CompositionViewModel aboutAppViewModel;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
         aboutAppViewModel =
@@ -46,7 +47,7 @@ public class CompositionFragment extends Fragment {
         gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent act2 = new Intent(container.getContext(), CompositionPanelActivity.class);
+                Intent act2 = new Intent(container.getContext(), ResourceActivity.class);
                 startActivity(act2);
             }
         });
