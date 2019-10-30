@@ -26,7 +26,8 @@
     <string name="menu_main_page">Main page</string>
     <string name="menu_user_panel">User panel</string>
     <string name="menu_about">About</string>
-    <string name="menu_composition">Add Composition</string>
+    <string name="menu_add_composition">Add Composition</string>
+    <string name="menu_scroll_composition">Scroll Composition</string>
     <string name="menu_sign_out">Log out</string>
     
     <string name="recently_searched">Recently searched </string>
@@ -55,5 +56,7 @@
     <string name="enter_collection_description">Enter description...</string>
     <string name="collection_add_resource">Add resource: </string>
     <string name="button_create_composition">Create</string>
+    
+    <string name="available_compositions">Available compositions</string>
 
 </resources>

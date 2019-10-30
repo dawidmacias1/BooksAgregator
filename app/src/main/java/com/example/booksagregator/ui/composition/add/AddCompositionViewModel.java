@@ -1,14 +1,14 @@
-package com.example.booksagregator.ui.composition;
+package com.example.booksagregator.ui.composition.add;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class CompositionViewModel extends ViewModel {
+public class AddCompositionViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public CompositionViewModel() {
+    public AddCompositionViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is slideshow fragment");
     }

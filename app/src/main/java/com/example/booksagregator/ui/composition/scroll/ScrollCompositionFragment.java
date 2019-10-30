@@ -1,4 +1,4 @@
-package com.example.booksagregator.ui.composition;
+package com.example.booksagregator.ui.composition.scroll;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,20 +14,20 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.booksagregator.CompositionPanelActivity;
 import com.example.booksagregator.R;
 import com.example.booksagregator.ResourceActivity;
+import com.example.booksagregator.ui.composition.add.AddCompositionViewModel;
 
-public class CompositionFragment extends Fragment {
+public class ScrollCompositionFragment extends Fragment {
 
-    private CompositionViewModel aboutAppViewModel;
+    private AddCompositionViewModel aboutAppViewModel;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              final ViewGroup container, Bundle savedInstanceState) {
         aboutAppViewModel =
-                ViewModelProviders.of(this).get(CompositionViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_add_collection, container, false);
+                ViewModelProviders.of(this).get(AddCompositionViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_scroll_compositions, container, false);
 
         LinearLayout gallery = root.findViewById(R.id.gallery);
 
