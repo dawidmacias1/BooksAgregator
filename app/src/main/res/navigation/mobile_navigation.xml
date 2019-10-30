@@ -42,4 +42,9 @@
         android:name="com.example.booksagregator.ui.composition.scroll.ScrollCompositionFragment"
         android:label="@string/app_name" />
 
+    <fragment
+        android:id="@+id/nav_collection"
+        android:name="com.example.booksagregator.ui.collection.CollectionFragment"
+        android:label="@string/app_name" />
+
 </navigation>

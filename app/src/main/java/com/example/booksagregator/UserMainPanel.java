@@ -50,7 +50,7 @@ public class UserMainPanel extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_main_page, R.id.nav_user_panel, R.id.nav_about, R.id.nav_favourites, R.id.nav_add_composition,
-                R.id.nav_scroll_composition, R.id.nav_sign_out)
+                R.id.nav_scroll_composition, R.id.nav_collection, R.id.nav_sign_out)
                 .setDrawerLayout(drawer)
                 .build();
 
