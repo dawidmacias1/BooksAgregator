@@ -8,6 +8,7 @@ public class BooksAgregatorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BooksAgregatorApplication.class, args);
+		int[][] tab = new int[5][];
 	}
 
 }
