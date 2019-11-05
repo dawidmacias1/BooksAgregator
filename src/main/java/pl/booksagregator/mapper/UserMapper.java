@@ -1,5 +1,6 @@
 package pl.booksagregator.mapper;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import pl.booksagregator.model.dao.UserDao;
 import pl.booksagregator.model.dto.UserDto;
@@ -13,7 +14,7 @@ public class UserMapper {
         UserDao userDao = new UserDao();
         userDao.setId(userDto.getId());
         userDao.setUsername(userDto.getUsername());
-        userDao.setPassword(userDto.getPassword());
+        userDao.setPassword(new BCryptPasswordEncoder().encode(userDao.getPassword()));
         userDao.setEmail(userDto.getEmail());
         userDao.setBirth(userDto.getBirth());
         userDao.setSearched(new ArrayList<>());

@@ -26,4 +26,10 @@ public class ApiExceptionHandler {
         return new ResponseEntity<>(new ApiException(e.getMessage(), httpStatus), httpStatus);
     }
 
+    @ExceptionHandler(ApiRequestUnauthorizedException.class)
+    public ResponseEntity<Object> handleApiRequestUnauthorizedException(ApiRequestUnauthorizedException e) {
+        HttpStatus httpStatus = HttpStatus.UNAUTHORIZED;
+        return new ResponseEntity<>(new ApiException(e.getMessage(), httpStatus), httpStatus);
+    }
+
 }
