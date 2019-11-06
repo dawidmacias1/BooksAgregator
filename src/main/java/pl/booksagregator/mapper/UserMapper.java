@@ -14,7 +14,7 @@ public class UserMapper {
         UserDao userDao = new UserDao();
         userDao.setId(userDto.getId());
         userDao.setUsername(userDto.getUsername());
-        userDao.setPassword(new BCryptPasswordEncoder().encode(userDao.getPassword()));
+        userDao.setPassword(new BCryptPasswordEncoder().encode(userDto.getPassword()));
         userDao.setEmail(userDto.getEmail());
         userDao.setBirth(userDto.getBirth());
         userDao.setSearched(new ArrayList<>());
